@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "m4Ok0nY4iAmDBC6GyqMfZVfauEt4t0L8eiNDrcAyg1A=",
+  "Source": "SAR-API",
+  "BasePath": "_content/SAR-API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
