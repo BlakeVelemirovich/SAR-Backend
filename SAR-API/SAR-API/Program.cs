@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using SAR_API.Domains;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,11 +10,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowSpecificOrigins", policy =>
+    options.AddPolicy("AllowAllOrigins", policy =>
     {
-        policy.WithOrigins("https://example.com", "http://localhost:3000") // Allowed origins
-            .AllowAnyHeader()    // Allow all headers
-            .AllowAnyMethod();   // Allow all HTTP methods
+        policy.AllowAnyOrigin()       // Allow requests from any origin
+            .AllowAnyHeader()       // Allow all headers
+            .AllowAnyMethod();      // Allow all HTTP methods
     });
 });
 
@@ -40,7 +41,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors("AllowSpecificOrigins");
+app.UseCors("AllowAllOrigins");
 
 var summaries = new[]
 {
@@ -60,8 +61,8 @@ app.MapGet("/weatherforecast", () =>
         return forecast;
     })
     .WithName("GetWeatherForecast")
-    .WithOpenApi()
-    .RequireAuthorization();
+    .WithOpenApi();
+    // Requires authorization
 
 app.MapPost("/logout", async (SignInManager<IdentityUser> signInManager,
         [FromBody] object empty) =>
@@ -75,6 +76,18 @@ app.MapPost("/logout", async (SignInManager<IdentityUser> signInManager,
     })
     .WithOpenApi()
     .RequireAuthorization();
+
+app.MapPost("/newIncident", (NewIncidentRequest request) =>
+    {
+        var response = new
+        {
+            incidentId = Guid.NewGuid()
+        };
+        
+        return Results.Ok(response);
+    })
+    .WithName("newIncident")
+    .WithOpenApi();
 
 app.Run();
 

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sBlStJyDSjk=",
+  "dgSpecHash": "rw751EeluT4=",
   "success": true,
   "projectFilePath": "E:\\coleg\\Capstone\\backend\\SAR-API\\SAR-API\\SAR-API.csproj",
   "expectedPackageFiles": [
@@ -30,11 +30,7 @@
     "C:\\Users\\blake\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "C:\\Users\\blake\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
     "C:\\Users\\blake\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.6.2\\swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
-    "C:\\Users\\blake\\.nuget\\packages\\system.diagnostics.diagnosticsource\\9.0.0\\system.diagnostics.diagnosticsource.9.0.0.nupkg.sha512",
-    "C:\\Users\\blake\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.11\\microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
-    "C:\\Users\\blake\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.11\\microsoft.windowsdesktop.app.ref.8.0.11.nupkg.sha512",
-    "C:\\Users\\blake\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.11\\microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512",
-    "C:\\Users\\blake\\.nuget\\packages\\microsoft.netcore.app.host.win-x86\\8.0.11\\microsoft.netcore.app.host.win-x86.8.0.11.nupkg.sha512"
+    "C:\\Users\\blake\\.nuget\\packages\\system.diagnostics.diagnosticsource\\9.0.0\\system.diagnostics.diagnosticsource.9.0.0.nupkg.sha512"
   ],
   "logs": []
 }
