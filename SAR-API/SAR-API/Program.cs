@@ -1,9 +1,20 @@
+using dotenv.net;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SAR_API.Domains;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// ENV Secrets
+DotEnv.Load();
+
+var connectionString = Environment.GetEnvironmentVariable("DefaultConnection");
+
+if (!string.IsNullOrEmpty(connectionString))
+{
+    builder.Configuration["ConnectionStrings:DefaultConnection"] = connectionString;
+}
 
 builder.Services.AddDbContext<ApplicationDbContext>(
     options => options.UseInMemoryDatabase("AppDb"));
@@ -27,6 +38,10 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddIdentityApiEndpoints<IdentityUser>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
+
+// Database Context
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
