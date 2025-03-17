@@ -8,4 +8,5 @@ public class NeonDbContext : DbContext
     {
     }
     
+    // public DbSet<Incident> Incidents { get; set; }
 }
