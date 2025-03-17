@@ -9,20 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ade5f0bb-9f00-4080-baa5-fdc7ed10af98" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SAR-API/Database/NeonDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SAR-API/Repositories/IIncidentRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SAR-API/Repositories/IncidentRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SAR-API/Services/IIncidentService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SAR-API/Services/IncidentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SAR-API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SAR-API/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/Domains/NewIncidentRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Domains/NewIncidentRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/SAR-API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/SAR-API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SAR/SAR/Controllers/AuthController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SAR/SAR/Database/ApplicationDbContext.cs" beforeDir="false" />
-    </list>
+    <list default="true" id="ade5f0bb-9f00-4080-baa5-fdc7ed10af98" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +20,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Toolset" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -125,6 +115,7 @@
       <workItem from="1736362977071" duration="1603000" />
       <workItem from="1736425274504" duration="11461000" />
       <workItem from="1742057680491" duration="13192000" />
+      <workItem from="1742169811024" duration="1767000" />
     </task>
     <servers />
   </component>
