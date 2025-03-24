@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SAR-API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d0ffc95ae6efcfb3eb4cc607b39d21991fa8565")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89d1900b7618404225c951349a392da01f82beab")]
 [assembly: System.Reflection.AssemblyProductAttribute("SAR-API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SAR-API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

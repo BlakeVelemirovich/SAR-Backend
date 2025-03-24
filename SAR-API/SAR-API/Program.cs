@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SAR_API.Database;
 using SAR_API.Domains;
+using SAR_API.DTOs;
 using SAR_API.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -44,10 +45,29 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IIncidentRepository, IncidentRepository>();
 builder.Services.AddScoped<IResponderRepository, ResponderRepository>();
 
+// Add Identity to manage authentication and authorization for security
 builder.Services.AddAuthorization();
 
 builder.Services.AddIdentityApiEndpoints<IdentityUser>()
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
+
+// Add custom role configuration to Identity
+async Task CreateRoles(IServiceProvider serviceProvider)
+{
+    var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    
+    // Admin and user roles
+    string[] roleNames = { "Admin", "User" };
+    // Check first if the roles exist in the database, and if it does not create them
+    foreach (var roleName in roleNames)
+    {
+        if (!await roleManager.RoleExistsAsync(roleName))
+        {
+            await roleManager.CreateAsync(new IdentityRole(roleName));
+        }
+    }
+}
 
 var app = builder.Build();
 
@@ -69,6 +89,7 @@ var summaries = new[]
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
 
+// Endpoint for testing authorization
 app.MapGet("/weatherforecast", () =>
     {
         var forecast = Enumerable.Range(1, 5).Select(index =>
@@ -85,6 +106,24 @@ app.MapGet("/weatherforecast", () =>
     .WithOpenApi();
     // Requires authorization
 
+// Custom registration endpoint for assigning roles (this is called after registration)
+    app.MapPost("/assign-role", async (UserManager<IdentityUser> userManager,
+        RoleManager<IdentityRole> roleManager,
+        [FromBody] RegisterationDto request) =>
+    {
+        var user = await userManager.FindByEmailAsync(request.Email);
+        if (user == null)
+            return Results.NotFound("User not found");
+
+        if (!await roleManager.RoleExistsAsync(request.Role))
+            await roleManager.CreateAsync(new IdentityRole(request.Role));
+
+        await userManager.AddToRoleAsync(user, request.Role);
+
+        return Results.Ok("Role assigned successfully");
+    });
+
+// Custom logout endpoint
 app.MapPost("/logout", async (SignInManager<IdentityUser> signInManager,
         [FromBody] object empty) =>
     {
@@ -98,6 +137,7 @@ app.MapPost("/logout", async (SignInManager<IdentityUser> signInManager,
     .WithOpenApi()
     .RequireAuthorization();
 
+// New incident endpoint
 app.MapPost("/newIncident", (NewIncidentRequest request) =>
     {
         var response = new
@@ -109,6 +149,13 @@ app.MapPost("/newIncident", (NewIncidentRequest request) =>
     })
     .WithName("newIncident")
     .WithOpenApi();
+
+// Call the CreateRoles method to create the roles in the database
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    await CreateRoles(services);
+}
 
 app.Run();
 
