@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using SAR_API.Database;
 using SAR_API.Domains;
 using SAR_API.DTOs;
+using SAR_API.IncidentService;
 using SAR_API.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -40,6 +41,7 @@ builder.Services.AddCors(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IResponderService, ResponderService>();
 
 // Add Repositories
 builder.Services.AddScoped<IIncidentRepository, IncidentRepository>();
@@ -105,23 +107,6 @@ app.MapGet("/weatherforecast", () =>
     .WithName("GetWeatherForecast")
     .WithOpenApi();
     // Requires authorization
-
-// Custom registration endpoint for assigning roles (this is called after registration)
-    app.MapPost("/assign-role", async (UserManager<IdentityUser> userManager,
-        RoleManager<IdentityRole> roleManager,
-        [FromBody] RegisterationDto request) =>
-    {
-        var user = await userManager.FindByEmailAsync(request.Email);
-        if (user == null)
-            return Results.NotFound("User not found");
-
-        if (!await roleManager.RoleExistsAsync(request.Role))
-            await roleManager.CreateAsync(new IdentityRole(request.Role));
-
-        await userManager.AddToRoleAsync(user, request.Role);
-
-        return Results.Ok("Role assigned successfully");
-    });
 
 // Custom logout endpoint
 app.MapPost("/logout", async (SignInManager<IdentityUser> signInManager,
