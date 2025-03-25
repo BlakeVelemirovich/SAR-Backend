@@ -7,10 +7,15 @@ namespace SAR_API.IncidentService;
 public class ResponderService : IResponderService
 {
     private readonly IUserRepository _userRepository;
+    private readonly IResponderRepository _responderRepository;
     
-    public ResponderService(IUserRepository userRepository)
+    public ResponderService(
+        IUserRepository userRepository,
+        IResponderRepository responderRepository
+        )
     {
         _userRepository = userRepository;
+        _responderRepository = responderRepository;
     }
     
     public async Task CreateResponder(AssignUserRequest request)
@@ -24,7 +29,7 @@ public class ResponderService : IResponderService
         // Convert string to Guid
         Guid userIdGuid = Guid.Parse(userId);
         
-        ResponderDTO responder = new ResponderDTO
+        Responder responder = new Responder
         {
             ResponderId = Guid.NewGuid(),
             ResponderName = responderName,
@@ -37,6 +42,11 @@ public class ResponderService : IResponderService
         };
         
         // Add responder to database
+        int dbResponse = await _responderRepository.AddResponder(responder);
         
+        if (dbResponse != 0)
+        {
+            throw new Exception("Failed to add responder to database.");
+        }
     }
 }

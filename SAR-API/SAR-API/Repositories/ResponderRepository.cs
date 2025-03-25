@@ -1,12 +1,22 @@
+using SAR_API.Database;
 using SAR_API.Domains;
+using SAR_API.DTOs;
 
 namespace SAR_API.Repositories;
 
 public class ResponderRepository : IResponderRepository
 {
-    public Task<int> AddResponder(Responder request)
+    private readonly NeonDbContext _dbContext;
+    
+    public ResponderRepository(NeonDbContext dbContext)
     {
-        // Add responder to database
-        return Task.FromResult(1);
+        _dbContext = dbContext;
+    }
+    
+    public async Task<int> AddResponder(Responder request)
+    {
+        // Add the responder to the database
+        await _dbContext.Responders.AddAsync(request);
+        return await _dbContext.SaveChangesAsync();
     }
 }

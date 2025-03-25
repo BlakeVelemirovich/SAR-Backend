@@ -38,18 +38,18 @@ public class UserController : ControllerBase
         if (!await roleManager.RoleExistsAsync(request.Role))
             await roleManager.CreateAsync(new IdentityRole(request.Role));
         
-        // Assign the role to the user
-        await userManager.AddToRoleAsync(user, request.Role);
-        
-        // Create new responder
         try
         {
+            // Assign the role to the user
+            await userManager.AddToRoleAsync(user, request.Role);
+            
+            // Create new Responder
             await _responderService.CreateResponder(request);
 
         }
         catch (Exception e)
         {
-            return BadRequest("There was an error in creating a new responder");
+            return BadRequest("There was an error in creating a new responder: " + e.Message);
         }
         
         // Return a success message
