@@ -16,7 +16,7 @@ public class ResponderRepository : IResponderRepository
     public async Task<int> AddResponder(Responder request)
     {
         // Add the responder to the database
-        await _dbContext.Responders.AddAsync(request);
+        await _dbContext.responder.AddAsync(request);
         return await _dbContext.SaveChangesAsync();
     }
 }

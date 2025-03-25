@@ -41,11 +41,14 @@ builder.Services.AddCors(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddControllers();
 builder.Services.AddScoped<IResponderService, ResponderService>();
+builder.Services.AddScoped<IIncidentService, IncidentService>();
 
 // Add Repositories
 builder.Services.AddScoped<IIncidentRepository, IncidentRepository>();
 builder.Services.AddScoped<IResponderRepository, ResponderRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 // Add Identity to manage authentication and authorization for security
 builder.Services.AddAuthorization();
@@ -141,6 +144,9 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     await CreateRoles(services);
 }
+
+// Add Controllers
+app.MapControllers();
 
 app.Run();
 
