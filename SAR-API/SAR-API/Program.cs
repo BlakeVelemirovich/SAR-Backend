@@ -44,11 +44,13 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 builder.Services.AddScoped<IResponderService, ResponderService>();
 builder.Services.AddScoped<IIncidentService, IncidentService>();
+builder.Services.AddScoped<IAgencyService, AgencyService>();
 
 // Add Repositories
 builder.Services.AddScoped<IIncidentRepository, IncidentRepository>();
 builder.Services.AddScoped<IResponderRepository, ResponderRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IAgencyRepository, AgencyRepository>();
 
 // Add Identity to manage authentication and authorization for security
 builder.Services.AddAuthorization();
