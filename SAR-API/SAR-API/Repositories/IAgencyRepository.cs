@@ -5,4 +5,6 @@ namespace SAR_API.Repositories;
 public interface IAgencyRepository
 {
     public Task<int> AddAgency(AgencyDTO request);
+    
+    public Task<List<AgencyDTO>> GetAgencies();
 }

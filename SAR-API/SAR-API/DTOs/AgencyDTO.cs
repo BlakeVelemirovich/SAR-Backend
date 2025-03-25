@@ -8,7 +8,7 @@ public class AgencyDTO
     // Primary Key
     [Key]
     [Column("agency_id")]
-    public Guid AgencyId { get; set; }
+    public string AgencyId { get; set; }
     
     [Column("agency_name")]
     public string AgencyName { get; set; }

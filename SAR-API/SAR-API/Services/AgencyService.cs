@@ -16,7 +16,9 @@ public class AgencyService : IAgencyService
     public async Task CreateAgency(AgencyRequest request)
     {
         // Create New Agency DTO
-        Guid agencyId = Guid.NewGuid();
+        Guid newGuid = Guid.NewGuid();
+        // Convert Guid to string
+        string agencyId = newGuid.ToString();
         AgencyDTO agency = new AgencyDTO()
         {
             AgencyId = agencyId,
@@ -26,5 +28,19 @@ public class AgencyService : IAgencyService
         
         // Add to Database
         await _agencyRepository.AddAgency(agency);
+    }
+    
+    public async Task<List<AgencyDTO>> GetAgencies()
+    {
+        // Get all agencies
+        var agencies = await _agencyRepository.GetAgencies();
+        
+        // Verify if there are any agencies
+        if (agencies.Count == 0)
+        {
+            throw new Exception("No agencies found");
+        }
+        
+        return agencies;
     }
 }
