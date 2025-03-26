@@ -13,5 +13,5 @@ public class NeonDbContext : DbContext
     public DbSet<AgencyDTO> agency { get; set; }
     public DbSet<Responder> responder { get; set; }
     public DbSet<User> user { get; set; }
-    // public DbSet<Incident> Incidents { get; set; }
+    public DbSet<IncidentDTO> incident { get; set; }
 }

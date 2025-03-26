@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SAR_API.Database;
 using SAR_API.Domains;
-using SAR_API.DTOs;
 using SAR_API.IncidentService;
 using SAR_API.Repositories;
 

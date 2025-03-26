@@ -54,5 +54,11 @@ public class UserController : ControllerBase
         
         // Return a success message
         return Ok("Role assigned successfully");
-    } 
+    }
+
+    [HttpPost("create-responder")]
+    public async Task<IActionResult> CreateResponder(NewIncidentRequest request)
+    {
+        return Ok();
+    }
 }
