@@ -21,4 +21,11 @@ public class IncidentRepository : IIncidentRepository
         await _dbContext.incident.AddAsync(request);
         return await _dbContext.SaveChangesAsync();
     }
+    
+    public async Task<int> AddOperationalPeriod(OperationalPeriodDTO request)
+    {
+        // Add operational period to database
+        await _dbContext.operational_period.AddAsync(request);
+        return await _dbContext.SaveChangesAsync();
+    }
 }

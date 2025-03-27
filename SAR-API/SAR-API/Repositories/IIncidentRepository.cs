@@ -6,4 +6,6 @@ namespace SAR_API.Repositories;
 public interface IIncidentRepository
 {
     Task<int> AddIncident(IncidentDTO request);
+    
+    Task<int> AddOperationalPeriod(OperationalPeriodDTO request);
 }

@@ -14,4 +14,5 @@ public class NeonDbContext : DbContext
     public DbSet<Responder> responder { get; set; }
     public DbSet<User> user { get; set; }
     public DbSet<IncidentDTO> incident { get; set; }
+    public DbSet<OperationalPeriodDTO> operational_period { get; set; }
 }
