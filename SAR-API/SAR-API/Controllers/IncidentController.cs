@@ -32,7 +32,7 @@ public class IncidentController : ControllerBase
         }
         catch (Exception e)
         {
-            return BadRequest("There was an error in creating a new agency: " + e.Message);
+            return BadRequest("There was an error in creating a new Incident: " + e.Message);
         }
 
         // Return a success message

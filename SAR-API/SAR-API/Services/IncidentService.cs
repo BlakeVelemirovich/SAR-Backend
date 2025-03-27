@@ -33,7 +33,8 @@ public class IncidentService : IIncidentService
         // Add incident to database
         int result = await _incidentRepository.AddIncident(incidentDto);
 
-        if (result != 0)
+        // Check if anything went wrong
+        if (result == 0)
         {
             throw new Exception("Failed to create incident");
         }
@@ -59,15 +60,18 @@ public class IncidentService : IIncidentService
             OperationalPeriod = request.OperationalPeriod,
             ResponderId = request.ResponderId,
             StartDatetime = request.StartDatetime,
-            IncidentId = request.IncidentId
+            IncidentId = request.IncidentId,
+            CommsId = null
         };
         
         // Add operational period to database
         int result = await _incidentRepository.AddOperationalPeriod(operationalPeriodDto);
         
-        if (result != 0)
+        if (result == 0)
         {
             throw new Exception("Failed to create operational period");
         }
+        // Write a new line to the console
+        Console.WriteLine("Operational period added successfully");
     }
 }

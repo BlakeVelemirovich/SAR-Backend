@@ -25,5 +25,5 @@ public class OperationalPeriodDTO
     public string IncidentId { get; set; }
     
     [Column("comms_id")]
-    public string? CommsId { get; set; }
+    public long? CommsId { get; set; }
 }
