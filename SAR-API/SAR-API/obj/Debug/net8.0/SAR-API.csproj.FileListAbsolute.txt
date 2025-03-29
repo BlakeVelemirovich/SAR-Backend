@@ -140,3 +140,12 @@ E:\coleg\Capstone\backend\SAR-API\SAR-API\bin\Debug\net8.0\ru\Microsoft.CodeAnal
 E:\coleg\Capstone\backend\SAR-API\SAR-API\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 E:\coleg\Capstone\backend\SAR-API\SAR-API\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 E:\coleg\Capstone\backend\SAR-API\SAR-API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+E:\coleg\Capstone\backend\SAR-API\SAR-API\bin\Debug\net8.0\IdentityModel.dll
+E:\coleg\Capstone\backend\SAR-API\SAR-API\bin\Debug\net8.0\JWT.dll
+E:\coleg\Capstone\backend\SAR-API\SAR-API\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
+E:\coleg\Capstone\backend\SAR-API\SAR-API\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+E:\coleg\Capstone\backend\SAR-API\SAR-API\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\coleg\Capstone\backend\SAR-API\SAR-API\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+E:\coleg\Capstone\backend\SAR-API\SAR-API\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+E:\coleg\Capstone\backend\SAR-API\SAR-API\bin\Debug\net8.0\Newtonsoft.Json.dll
+E:\coleg\Capstone\backend\SAR-API\SAR-API\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

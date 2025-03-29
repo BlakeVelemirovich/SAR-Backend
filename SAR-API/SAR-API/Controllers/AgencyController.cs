@@ -57,7 +57,5 @@ public class AgencyController : ControllerBase
             return BadRequest("There was an error in retrieving agencies: " + e.Message);
         }
         
-        // Return a success message
-        return Ok("Agencies retrieved successfully");
     }
 }

@@ -50,6 +50,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "IdentityModel": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "JWT": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -83,6 +91,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.7.0, )"
             },
             "System.Text.Json": {
               "target": "Package",

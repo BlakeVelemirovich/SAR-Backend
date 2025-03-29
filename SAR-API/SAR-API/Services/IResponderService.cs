@@ -6,4 +6,6 @@ namespace SAR_API.IncidentService;
 public interface IResponderService
 {
     public Task CreateResponder(AssignUserRequest request);
+
+    public Task<string> GetUserIdByEmail(GetUserIdRequest request);
 }

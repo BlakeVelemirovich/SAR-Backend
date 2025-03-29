@@ -49,4 +49,16 @@ public class ResponderService : IResponderService
             throw new Exception("Failed to add responder to database.");
         }
     }
+    
+    public async Task<string> GetUserIdByEmail(GetUserIdRequest request)
+    {
+        var userId = await _userRepository.FindUserIdByEmail(request.Email);
+        
+        if (userId == null)
+        {
+            throw new Exception("User not found.");
+        }
+        
+        return userId;
+    }
 }

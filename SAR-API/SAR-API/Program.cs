@@ -1,9 +1,10 @@
+using System.Security.Claims;
 using dotenv.net;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using SAR_API.Database;
-using SAR_API.Domains;
 using SAR_API.IncidentService;
 using SAR_API.Repositories;
 
@@ -90,28 +91,6 @@ app.UseHttpsRedirection();
 
 app.UseCors("AllowAllOrigins");
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-// Endpoint for testing authorization
-app.MapGet("/weatherforecast", () =>
-    {
-        var forecast = Enumerable.Range(1, 5).Select(index =>
-                new WeatherForecast
-                (
-                    DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                    Random.Shared.Next(-20, 55),
-                    summaries[Random.Shared.Next(summaries.Length)]
-                ))
-            .ToArray();
-        return forecast;
-    })
-    .WithName("GetWeatherForecast")
-    .WithOpenApi();
-    // Requires authorization
-
 // Custom logout endpoint
 app.MapPost("/logout", async (SignInManager<IdentityUser> signInManager,
         [FromBody] object empty) =>
@@ -126,18 +105,6 @@ app.MapPost("/logout", async (SignInManager<IdentityUser> signInManager,
     .WithOpenApi()
     .RequireAuthorization();
 
-// New incident endpoint
-app.MapPost("/newIncident", (NewIncidentRequest request) =>
-    {
-        var response = new
-        {
-            incidentId = Guid.NewGuid()
-        };
-        
-        return Results.Ok(response);
-    })
-    .WithName("newIncident")
-    .WithOpenApi();
 
 // Call the CreateRoles method to create the roles in the database
 using (var scope = app.Services.CreateScope())
@@ -150,8 +117,3 @@ using (var scope = app.Services.CreateScope())
 app.MapControllers();
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
