@@ -1,5 +1,4 @@
 using SAR_API.Domains;
-using SAR_API.DTOs;
 using SAR_API.Repositories;
 
 namespace SAR_API.IncidentService;
@@ -19,7 +18,7 @@ public class AgencyService : IAgencyService
         Guid newGuid = Guid.NewGuid();
         // Convert Guid to string
         string agencyId = newGuid.ToString();
-        AgencyDTO agency = new AgencyDTO()
+        Agency agency = new Agency()
         {
             AgencyId = agencyId,
             AgencyName = request.AgencyName,
@@ -30,7 +29,7 @@ public class AgencyService : IAgencyService
         await _agencyRepository.AddAgency(agency);
     }
     
-    public async Task<List<AgencyDTO>> GetAgencies()
+    public async Task<List<Agency>> GetAgencies()
     {
         // Get all agencies
         var agencies = await _agencyRepository.GetAgencies();

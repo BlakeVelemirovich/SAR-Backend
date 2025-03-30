@@ -10,35 +10,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ade5f0bb-9f00-4080-baa5-fdc7ed10af98" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SAR-API/Domains/GetUserIdRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SAR-API/DTOs/IncidentDetailsDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SAR-API/Domains/Incident.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SAR-API/Domains/OperationalPeriod.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SAR-API/Domains/TaskIncident.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SAR-API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SAR-API/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/SAR-API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/SAR-API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Controllers/IncidentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Controllers/IncidentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Controllers/TaskController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Controllers/TaskController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Database/NeonDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Database/NeonDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Domains/Agency.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Domains/Agency.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Domains/Responder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Domains/Responder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Repositories/AgencyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Repositories/AgencyRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Repositories/IAgencyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Repositories/IAgencyRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Repositories/IIncidentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Repositories/IIncidentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Repositories/IncidentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Repositories/IncidentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Services/AgencyService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Services/AgencyService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Services/IAgencyService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Services/IAgencyService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Services/IIncidentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Services/IIncidentService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Services/IncidentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Services/IncidentService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/Services/ResponderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Services/ResponderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/bin/Debug/net8.0/SAR-API.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/bin/Debug/net8.0/SAR-API.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/bin/Debug/net8.0/SAR-API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/bin/Debug/net8.0/SAR-API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/bin/Debug/net8.0/SAR-API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/bin/Debug/net8.0/SAR-API.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/bin/Debug/net8.0/SAR-API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/bin/Debug/net8.0/SAR-API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/SAR-API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/SAR-API.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/SAR-API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/SAR-API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/SAR-API.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/SAR-API.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/SAR-API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/SAR-API.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/SAR-API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/SAR-API.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/SAR-API.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/SAR-API.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/SAR-API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/SAR-API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/SAR-API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/SAR-API.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/SAR-API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/SAR-API.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/ref/SAR-API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/ref/SAR-API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/refint/SAR-API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/refint/SAR-API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/obj/SAR-API.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/SAR-API.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/obj/SAR-API.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/SAR-API.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SAR/SAR/Controllers/AuthController.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SAR/SAR/Database/ApplicationDbContext.cs" beforeDir="false" />
     </list>
@@ -54,6 +56,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/1584e493603cfc4e9b36b77d6d4afe97de6363f9/src/libraries/System.Private.CoreLib/src/System/Threading/Tasks/Task.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SAR-API/Domains/NewOperationalPeriodRequest.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -166,7 +169,9 @@
       <workItem from="1743093840442" duration="13074000" />
       <workItem from="1743265395968" duration="1893000" />
       <workItem from="1743267369407" duration="212000" />
-      <workItem from="1743267608511" duration="8903000" />
+      <workItem from="1743267608511" duration="11121000" />
+      <workItem from="1743351813572" duration="7374000" />
+      <workItem from="1743371052013" duration="5079000" />
     </task>
     <servers />
   </component>

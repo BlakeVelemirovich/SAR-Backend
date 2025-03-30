@@ -17,7 +17,7 @@ public class IncidentService : IIncidentService
         // Create a new incident
         string incidentId = Guid.NewGuid().ToString();
         
-        IncidentDTO incidentDto = new IncidentDTO
+        Incident incident = new Incident
         {
             IncidentId = incidentId,
             IncidentName = request.IncidentName,
@@ -31,7 +31,7 @@ public class IncidentService : IIncidentService
         };
         
         // Add incident to database
-        int result = await _incidentRepository.AddIncident(incidentDto);
+        int result = await _incidentRepository.AddIncident(incident);
 
         // Check if anything went wrong
         if (result == 0)
@@ -54,10 +54,10 @@ public class IncidentService : IIncidentService
         // Create a guid operational id
         string operationalPeriodId = Guid.NewGuid().ToString();
 
-        OperationalPeriodDTO operationalPeriodDto = new OperationalPeriodDTO
+        OperationalPeriod operationalPeriod = new OperationalPeriod
         {
             OperationalPeriodId = operationalPeriodId,
-            OperationalPeriod = request.OperationalPeriod,
+            Period = request.OperationalPeriod,
             ResponderId = request.ResponderId,
             StartDatetime = request.StartDatetime,
             IncidentId = request.IncidentId,
@@ -65,7 +65,7 @@ public class IncidentService : IIncidentService
         };
         
         // Add operational period to database
-        int result = await _incidentRepository.AddOperationalPeriod(operationalPeriodDto);
+        int result = await _incidentRepository.AddOperationalPeriod(operationalPeriod);
         
         if (result == 0)
         {
@@ -73,5 +73,17 @@ public class IncidentService : IIncidentService
         }
         // Write a new line to the console
         Console.WriteLine("Operational period added successfully");
+    }
+    
+    public async Task<List<IncidentDetailsDTO>> GetAllIncidents()
+    {
+        var incidentList = await _incidentRepository.GetAllIncidents();
+        
+        if (incidentList == null)
+        {
+            throw new Exception("Failed to get all incidents");
+        }
+        
+        return incidentList;
     }
 }

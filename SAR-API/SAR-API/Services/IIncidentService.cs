@@ -6,4 +6,6 @@ namespace SAR_API.IncidentService;
 public interface IIncidentService
 {   
     Task CreateIncident(NewIncidentRequest request);
+    
+    Task <List<IncidentDetailsDTO>> GetAllIncidents();
 }

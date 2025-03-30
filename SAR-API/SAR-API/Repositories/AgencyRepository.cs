@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using SAR_API.Database;
+using SAR_API.Domains;
 using SAR_API.DTOs;
 
 namespace SAR_API.Repositories;
@@ -13,14 +14,14 @@ public class AgencyRepository : IAgencyRepository
         _dbContext = dbContext;
     }
     
-    public async Task<int> AddAgency(AgencyDTO request)
+    public async Task<int> AddAgency(Agency request)
     {
         // Add the agency to the database
         await _dbContext.agency.AddAsync(request);
         return await _dbContext.SaveChangesAsync();
     }
     
-    public async Task<List<AgencyDTO>> GetAgencies()
+    public async Task<List<Agency>> GetAgencies()
     {
         // Get all agencies from the database
         return await _dbContext.agency.ToListAsync();

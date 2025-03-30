@@ -7,5 +7,5 @@ public interface IAgencyService
 {
     public Task CreateAgency(AgencyRequest request);
     
-    public Task<List<AgencyDTO>> GetAgencies();
+    public Task<List<Agency>> GetAgencies();
 }

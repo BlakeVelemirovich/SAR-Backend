@@ -14,7 +14,7 @@ public class TaskController : ControllerBase
         _taskService = taskService;
     }
     
-    [HttpPost]
+    [HttpPost("create-task")]
     public async Task<IActionResult> CreateTask(
         [FromBody] NewTaskRequest request
     )

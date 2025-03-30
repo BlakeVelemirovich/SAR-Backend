@@ -5,7 +5,7 @@ namespace SAR_API.Domains;
 public class Responder
 {
     [Column("responder_id")]
-    public Guid ResponderId { get; set; }
+    public string ResponderId { get; set; }
     
     [Column("responder_name")]
     public string ResponderName { get; set; }
@@ -20,7 +20,7 @@ public class Responder
     public string Province { get; set; }
     
     [Column("agency_id")]
-    public Guid AgencyId { get; set; }
+    public string AgencyId { get; set; }
     
     [Column("checked_in")]
     public Boolean CheckedIn { get; set; }

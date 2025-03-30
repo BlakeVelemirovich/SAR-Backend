@@ -38,4 +38,19 @@ public class IncidentController : ControllerBase
         // Return a success message
         return Ok("Incident added successfully");
     }
+    
+    [HttpGet("get-allIncidents")]
+    public async Task<IActionResult> GetAllIncidents()
+    {
+        try
+        {
+            // Get all Incidents
+            var incidents = await _incidentService.GetAllIncidents();
+            return Ok(incidents);
+        }
+        catch (Exception e)
+        {
+            return BadRequest("There was an error in getting all Incidents: " + e.Message);
+        }
+    }
 }
