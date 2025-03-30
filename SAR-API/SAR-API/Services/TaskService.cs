@@ -37,5 +37,29 @@ public class TaskService : ITaskService
         {
             throw new Exception("Failed to create task");
         }
+        
+        // Add team members to task
+        string teamId = Guid.NewGuid().ToString();
+        
+        foreach (var team in request.Team)
+        {
+            TeamDTO teamDTO = new TeamDTO
+            {
+                TeamId = teamId,
+                ResponderId = team.ResponderId,
+                StartDate = team.StartDate,
+                EndDate = team.EndDate,
+                TaskId = taskId
+            };
+            
+            // Save team to database
+            int teamResult = await _taskRepository.CreateTeam(teamDTO);
+            
+            // Check if team was created successfully (teamResult == 0 if failed)
+            if (teamResult == 0)
+            {
+                throw new Exception("Failed to create team");
+            }
+        }
     }
 }

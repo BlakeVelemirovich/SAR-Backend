@@ -20,4 +20,13 @@ public class TaskRepository : ITaskRepository
 
         return result;
     }
+
+    public async Task<int> CreateTeam(TeamDTO team)
+    {
+        // Save Team to DB
+        await _dbContext.AddAsync(team);
+        int result = await _dbContext.SaveChangesAsync();
+
+        return result;
+    }
 }

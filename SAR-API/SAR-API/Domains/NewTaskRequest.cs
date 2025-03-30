@@ -18,4 +18,10 @@ public class NewTaskRequest
     
     [JsonProperty("description")]
     public string Description { get; set; }
+    
+    [JsonProperty("team")]
+    public List<Team> Team { get; set; }
+    
+    [JsonProperty("responderId")]
+    public string ResponderId { get; set; }
 }
