@@ -45,12 +45,14 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<IResponderService, ResponderService>();
 builder.Services.AddScoped<IIncidentService, IncidentService>();
 builder.Services.AddScoped<IAgencyService, AgencyService>();
+builder.Services.AddScoped<ITaskService, TaskService>();
 
 // Add Repositories
 builder.Services.AddScoped<IIncidentRepository, IncidentRepository>();
 builder.Services.AddScoped<IResponderRepository, ResponderRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IAgencyRepository, AgencyRepository>();
+builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 
 // Add Identity to manage authentication and authorization for security
 builder.Services.AddAuthorization();
