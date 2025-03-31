@@ -9,6 +9,7 @@ public class IncidentRepository : IIncidentRepository
 {
     private readonly NeonDbContext _dbContext;
     
+    // Dependency Injection
     public IncidentRepository(
         NeonDbContext dbContext
         )
@@ -32,6 +33,7 @@ public class IncidentRepository : IIncidentRepository
 
     public async Task<List<IncidentDetailsDTO>> GetAllIncidents()
     {
+        // Get all incidents using Methods Syntax
         var result = await (
             from i in _dbContext.incident
             join o in _dbContext.operational_period on i.IncidentId equals o.IncidentId
@@ -52,6 +54,7 @@ public class IncidentRepository : IIncidentRepository
     
     public async Task<List<IncidentDetailsDTO>> GetAllPastIncidents()
     {
+        // Get all incidents using Methods Syntax
         var result = await (
             from i in _dbContext.incident
             join o in _dbContext.operational_period on i.IncidentId equals o.IncidentId

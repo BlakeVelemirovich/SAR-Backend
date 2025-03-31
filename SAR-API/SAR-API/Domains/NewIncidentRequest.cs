@@ -13,7 +13,7 @@ public class NewIncidentRequest
     public string IncidentName { get; set; }
 
     [Required(ErrorMessage = "IncidentCommander is required.")]
-    [StringLength(50, ErrorMessage = "IncidentCommander cannot exceed 50 characters.")]
+    [StringLength(500, ErrorMessage = "IncidentCommander cannot exceed 500 characters.")]
     [JsonPropertyName("incidentCommander")]
     public string IncidentCommander { get; set; }
 
