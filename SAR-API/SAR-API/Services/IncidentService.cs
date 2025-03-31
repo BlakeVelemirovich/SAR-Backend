@@ -86,4 +86,16 @@ public class IncidentService : IIncidentService
         
         return incidentList;
     }
+    
+    public async Task<List<IncidentDetailsDTO>> GetAllPastIncidents()
+    {
+        var incidentList = await _incidentRepository.GetAllPastIncidents();
+        
+        if (incidentList == null)
+        {
+            throw new Exception("Failed to get all past incidents");
+        }
+        
+        return incidentList;
+    }
 }

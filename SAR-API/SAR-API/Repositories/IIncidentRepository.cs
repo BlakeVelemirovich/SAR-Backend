@@ -10,4 +10,6 @@ public interface IIncidentRepository
     Task<int> AddOperationalPeriod(OperationalPeriod request);
     
     Task<List<IncidentDetailsDTO>> GetAllIncidents();
+    
+    Task<List<IncidentDetailsDTO>> GetAllPastIncidents();
 }

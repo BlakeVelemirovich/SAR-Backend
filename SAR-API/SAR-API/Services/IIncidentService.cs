@@ -8,4 +8,6 @@ public interface IIncidentService
     Task CreateIncident(NewIncidentRequest request);
     
     Task <List<IncidentDetailsDTO>> GetAllIncidents();
+    
+    Task <List<IncidentDetailsDTO>> GetAllPastIncidents();
 }
