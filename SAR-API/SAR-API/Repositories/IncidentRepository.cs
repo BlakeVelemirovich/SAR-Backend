@@ -37,6 +37,7 @@ public class IncidentRepository : IIncidentRepository
             join o in _dbContext.operational_period on i.IncidentId equals o.IncidentId
             join r in _dbContext.responder on o.ResponderId equals r.ResponderId
             join a in _dbContext.agency on r.AgencyId equals a.AgencyId
+            where o.EndDatetime == null
             select new IncidentDetailsDTO {
                 IncidentId = i.IncidentId,
                 IncidentName = i.IncidentName,
