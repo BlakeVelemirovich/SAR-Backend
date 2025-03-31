@@ -28,7 +28,7 @@ public class ResponderService : IResponderService
         
         // Convert Guid to string
         string responderId = Guid.NewGuid().ToString();
-        string agencyId = Guid.NewGuid().ToString();
+        string agencyId = request.AgencyId.ToString();
         string userIdGuid = Guid.Parse(userId).ToString();
         
         Responder responder = new Responder
