@@ -26,5 +26,5 @@ public class Responder
     public Boolean CheckedIn { get; set; }
     
     [Column("user_id")]
-    public Guid UserId { get; set; }
+    public string UserId { get; set; }
 }

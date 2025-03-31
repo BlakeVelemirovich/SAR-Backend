@@ -71,8 +71,6 @@ public class IncidentService : IIncidentService
         {
             throw new Exception("Failed to create operational period");
         }
-        // Write a new line to the console
-        Console.WriteLine("Operational period added successfully");
     }
     
     public async Task<List<IncidentDetailsDTO>> GetAllIncidents()

@@ -26,12 +26,10 @@ public class ResponderService : IResponderService
         // Grab User Id using email
         var userId = await _userRepository.FindUserIdByEmail(request.Email);
         
-        // Convert string to Guid
-        Guid userIdGuid = Guid.Parse(userId);
-        
         // Convert Guid to string
         string responderId = Guid.NewGuid().ToString();
         string agencyId = Guid.NewGuid().ToString();
+        string userIdGuid = Guid.Parse(userId).ToString();
         
         Responder responder = new Responder
         {
