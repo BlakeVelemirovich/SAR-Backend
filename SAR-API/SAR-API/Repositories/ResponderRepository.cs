@@ -31,7 +31,7 @@ public class ResponderRepository : IResponderRepository
         // Get user by email
         var result = await (
             from r in _neonDbContext.responder
-            join u in _dbContext.Users on r.UserId equals u.Id
+            join u in _neonDbContext.AspNetUsers on r.UserId equals u.Id
             where r.UserId == u.Id
             select r.ResponderId
 

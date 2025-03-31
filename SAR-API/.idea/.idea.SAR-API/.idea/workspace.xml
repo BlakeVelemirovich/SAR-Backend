@@ -10,6 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ade5f0bb-9f00-4080-baa5-fdc7ed10af98" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SAR-API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SAR-API/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Database/NeonDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Database/NeonDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Domains/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Domains/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Repositories/ResponderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Repositories/ResponderRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/bin/Debug/net8.0/SAR-API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/bin/Debug/net8.0/SAR-API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/bin/Debug/net8.0/SAR-API.exe" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/bin/Debug/net8.0/SAR-API.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/bin/Debug/net8.0/SAR-API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/bin/Debug/net8.0/SAR-API.pdb" afterDir="false" />
@@ -21,8 +25,6 @@
       <change beforePath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/ref/SAR-API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/ref/SAR-API.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/refint/SAR-API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/obj/Debug/net8.0/refint/SAR-API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SAR/SAR/Controllers/AuthController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SAR/SAR/Database/ApplicationDbContext.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
