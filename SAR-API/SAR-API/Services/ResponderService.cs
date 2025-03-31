@@ -46,7 +46,7 @@ public class ResponderService : IResponderService
         // Add responder to database
         int dbResponse = await _responderRepository.AddResponder(responder);
         
-        if (dbResponse != 0)
+        if (dbResponse == 0)
         {
             throw new Exception("Failed to add responder to database.");
         }
