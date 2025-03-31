@@ -76,4 +76,18 @@ public class UserController : ControllerBase
             return BadRequest("User not found. " + e.Message);
         }
     }
+    
+    [HttpPost("get-responderId")]
+    public async Task<IActionResult> GetResponderId(GetUserIdRequest request)
+    {
+        try
+        {
+            string responderId = await _responderService.GetResponderIdByEmail(request);
+            return Ok(responderId);
+        }
+        catch (Exception e)
+        {
+            return BadRequest("Responder not found. " + e.Message);
+        }
+    }
 }

@@ -63,4 +63,16 @@ public class ResponderService : IResponderService
         
         return userId;
     }
+    
+    public async Task<string> GetResponderIdByEmail(GetUserIdRequest request)
+    {
+        var responderId = await _responderRepository.FindUserIdByEmail(request.Email);
+        
+        if (responderId == null)
+        {
+            throw new Exception("Responder not found.");
+        }
+        
+        return responderId;
+    }
 }
