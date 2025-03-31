@@ -64,7 +64,6 @@ public class UserController : ControllerBase
     }
     
     [HttpPost("get-userId")]
-    [Authorize]
     public async Task<IActionResult> GetUserId(GetUserIdRequest request)
     {
         try
