@@ -12,4 +12,8 @@ public interface IIncidentRepository
     Task<List<IncidentDetailsDTO>> GetAllIncidents();
     
     Task<List<IncidentDetailsDTO>> GetAllPastIncidents();
+
+    Task<Incident> GetIncidentDetails(string incidentId);
+    
+    Task<List<OperationalPeriodDTO>> GetOperationalPeriods(string incidentId);
 }

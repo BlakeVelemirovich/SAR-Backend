@@ -26,4 +26,6 @@ public class OperationalPeriodDTO
     
     [Column("comms_id")]
     public long? CommsId { get; set; }
+    
+    public List<TaskDetailsDTO> Tasks { get; set; }
 }

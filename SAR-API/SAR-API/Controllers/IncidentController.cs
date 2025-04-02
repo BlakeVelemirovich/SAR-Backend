@@ -68,4 +68,21 @@ public class IncidentController : ControllerBase
             return BadRequest("There was an error in getting all Past Incidents: " + e.Message);
         }
     }
+    
+    [HttpGet("get-viewIncident/{incidentId}")]
+    public async Task<IActionResult> GetViewIncident(
+        [FromRoute] string incidentId
+    )
+    {
+        try
+        {
+            // Get view Incident
+            var incident = await _incidentService.GetViewIncident(incidentId);
+            return Ok(incident);
+        }
+        catch (Exception e)
+        {
+            return BadRequest("There was an error in getting view Incident: " + e.Message);
+        }
+    }
 }

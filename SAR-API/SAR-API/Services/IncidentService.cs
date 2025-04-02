@@ -1,6 +1,7 @@
 using SAR_API.Domains;
 using SAR_API.DTOs;
 using SAR_API.Repositories;
+using Task = System.Threading.Tasks.Task;
 
 namespace SAR_API.IncidentService;
 
@@ -95,5 +96,46 @@ public class IncidentService : IIncidentService
         }
         
         return incidentList;
+    }
+    
+    public async Task<ViewIncidentDetailsDTO> GetViewIncident(string incidentId)
+    {
+        // Get the incident details
+        var incident = await _incidentRepository.GetIncidentDetails(incidentId);
+        
+        if (incident == null)
+        {
+            throw new Exception("Failed to get view incident");
+        }
+
+        var incidentDto = new IncidentDTO
+        {
+            IncidentId = incident.IncidentId,
+            IncidentName = incident.IncidentName,
+            IncidentType = incident.IncidentType,
+            Province = incident.Province,
+            City = incident.City,
+            Postal = incident.Postal,
+            Address = incident.Address,
+            Summary = incident.Summary,
+            Objectives = incident.Objectives
+        };
+        
+        // Get the operational periods associated with the Incident
+        var operationalPeriods = await _incidentRepository.GetOperationalPeriods(incidentId);
+        
+        if (operationalPeriods == null)
+        {
+            throw new Exception("Failed to get operational periods");
+        }
+        
+        // Combine the two into a single DTO
+        ViewIncidentDetailsDTO viewIncident = new ViewIncidentDetailsDTO
+        {
+            Incident = incidentDto,
+            OperationalPeriods = operationalPeriods
+        };
+        
+        return viewIncident;
     }
 }

@@ -72,4 +72,37 @@ public class IncidentRepository : IIncidentRepository
 
         return result;
     }
+
+    public async Task<Incident> GetIncidentDetails(string incidentId)
+    {
+        // Get incident details
+        return await _dbContext.incident.FirstOrDefaultAsync(i => i.IncidentId == incidentId);
+    }
+    
+    public async Task<List<OperationalPeriodDTO>> GetOperationalPeriods(string incidentId)
+    {
+        // Get operational periods
+        var operationalPeriods = await _dbContext.operational_period
+            .Where(op => op.IncidentId == incidentId)
+            .Select(op => new OperationalPeriodDTO()
+            {
+                OperationalPeriodId = op.OperationalPeriodId,
+                OperationalPeriod = op.Period,
+                ResponderId = op.ResponderId,
+                StartDatetime = op.StartDatetime,
+                EndDatetime = op.EndDatetime,
+                IncidentId = op.IncidentId,
+                Tasks = _dbContext.task
+                    .Where(t => t.OperationalPeriodId == op.OperationalPeriodId)
+                    .Select(t => new TaskDetailsDTO
+                    {
+                        TaskId = t.TaskId,
+                        StartDateTime = t.StartDatetime,
+                        EndDateTime = t.EndDatetime ?? DateTime.MinValue
+                    }).ToList()
+            })
+            .ToListAsync();
+
+        return operationalPeriods;
+    }
 }
