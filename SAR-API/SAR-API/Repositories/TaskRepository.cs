@@ -51,9 +51,12 @@ public class TaskRepository : ITaskRepository
                 Role = t.Role,
                 Responders = _dbContext.Set<TeamResponder>()
                     .Where(tr => tr.TeamId == t.TeamId)
-                    .Select(tr => new ResponderDTO
+                    .Join(_dbContext.Set<Responder>(), tr => tr.ResponderId, r => r.ResponderId, (tr, r) => new ResponderDTO
                     {
-                        ResponderId = tr.ResponderId
+                        ResponderId = r.ResponderId,
+                        CheckedIn = r.CheckedIn,
+                        ResponderName = r.ResponderName,
+                        Phone = r.Phone
                     }).ToList()
             }).FirstOrDefaultAsync();
 

@@ -94,7 +94,7 @@ public class ResponderService : IResponderService
             ResponderDTO dto = new ResponderDTO
             {
                 ResponderId = responder.ResponderId,
-                CheckedIn = responder.CheckedIn.ToString(),
+                CheckedIn = responder.CheckedIn,
                 ResponderName = responder.ResponderName,
                 Phone = responder.Phone
             };
