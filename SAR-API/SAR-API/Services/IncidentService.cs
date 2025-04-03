@@ -138,4 +138,15 @@ public class IncidentService : IIncidentService
         
         return viewIncident;
     }
+    
+    public async Task UpdateIncidentEndDate(UpdateIncidentEndDateRequest request)
+    {
+        // Update the incident end date
+        int result = await _incidentRepository.UpdateIncidentEndDate(request);
+        
+        if (result == 0)
+        {
+            throw new Exception("Failed to update incident end date");
+        }
+    }
 }

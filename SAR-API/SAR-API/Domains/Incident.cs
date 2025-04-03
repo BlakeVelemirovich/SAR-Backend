@@ -33,4 +33,7 @@ public class Incident
     
     [Column("objectives")]
     public string Objectives { get; set; }
+    
+    [Column("end_datetime")]
+    public DateTime? EndDate { get; set; }
 }

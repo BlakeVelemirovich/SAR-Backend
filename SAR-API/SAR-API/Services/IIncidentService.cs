@@ -13,4 +13,6 @@ public interface IIncidentService
     Task <List<IncidentDetailsDTO>> GetAllPastIncidents();
     
     Task<ViewIncidentDetailsDTO> GetViewIncident(string incidentId);
+    
+    Task UpdateIncidentEndDate(UpdateIncidentEndDateRequest request); 
 }

@@ -39,7 +39,7 @@ public class IncidentRepository : IIncidentRepository
             join o in _dbContext.operational_period on i.IncidentId equals o.IncidentId
             join r in _dbContext.responder on o.ResponderId equals r.ResponderId
             join a in _dbContext.agency on r.AgencyId equals a.AgencyId
-            where o.EndDatetime == null
+            where i.EndDate == null
             select new IncidentDetailsDTO {
                 IncidentId = i.IncidentId,
                 IncidentName = i.IncidentName,
@@ -60,7 +60,7 @@ public class IncidentRepository : IIncidentRepository
             join o in _dbContext.operational_period on i.IncidentId equals o.IncidentId
             join r in _dbContext.responder on o.ResponderId equals r.ResponderId
             join a in _dbContext.agency on r.AgencyId equals a.AgencyId
-            where o.EndDatetime != null
+            where i.EndDate != null
             select new IncidentDetailsDTO {
                 IncidentId = i.IncidentId,
                 IncidentName = i.IncidentName,
@@ -104,5 +104,23 @@ public class IncidentRepository : IIncidentRepository
             .ToListAsync();
 
         return operationalPeriods;
+    }
+    
+    public async Task<int> UpdateIncidentEndDate(UpdateIncidentEndDateRequest request)
+    {
+        // Get incident from database
+        var incident = await _dbContext.incident.FirstOrDefaultAsync(i => i.IncidentId == request.IncidentId);
+        
+        // Check if incident exists
+        if (incident == null)
+        {
+            return 0;
+        }
+        
+        // Update incident end date
+        incident.EndDate = request.EndDate;
+        
+        // Save changes to database
+        return await _dbContext.SaveChangesAsync();
     }
 }

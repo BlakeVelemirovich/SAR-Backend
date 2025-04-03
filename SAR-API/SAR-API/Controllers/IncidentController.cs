@@ -85,4 +85,26 @@ public class IncidentController : ControllerBase
             return BadRequest("There was an error in getting view Incident: " + e.Message);
         }
     }
+    
+    [HttpPost("update-incidentEndDate")]
+    public async Task<IActionResult> UpdateIncidentEndDate(
+        [FromBody] UpdateIncidentEndDateRequest request
+    )
+    {
+        // Check if the model state is valid
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+
+        try
+        {
+            // Update Incident End Date
+            await _incidentService.UpdateIncidentEndDate(request);
+        }
+        catch (Exception e)
+        {
+            return BadRequest("There was an error in updating Incident End Date: " + e.Message);
+        }
+
+        // Return a success message
+        return Ok("Incident End Date updated successfully");
+    }
 }

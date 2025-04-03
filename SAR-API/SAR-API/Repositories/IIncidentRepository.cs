@@ -16,4 +16,6 @@ public interface IIncidentRepository
     Task<Incident> GetIncidentDetails(string incidentId);
     
     Task<List<OperationalPeriodDTO>> GetOperationalPeriods(string incidentId);
+    
+    Task<int> UpdateIncidentEndDate(UpdateIncidentEndDateRequest request);
 }
