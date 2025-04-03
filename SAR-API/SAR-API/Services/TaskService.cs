@@ -38,29 +38,46 @@ public class TaskService : ITaskService
             throw new Exception("Failed to create task");
         }
         
-        // Add team members to task
+        // Create a new team and return the team id
         string teamId = Guid.NewGuid().ToString();
         
-        // foreach (var team in request.Team)
-        // {
-        //     TeamDTO teamDTO = new TeamDTO
-        //     {
-        //         TeamId = teamId,
-        //         ResponderId = team.,
-        //         StartDate = team.StartDate,
-        //         EndDate = team.EndDate,
-        //         TaskId = taskId
-        //     };
-        //     
-        //     // Save team to database
-        //     int teamResult = await _taskRepository.CreateTeam(teamDTO);
-        //     
-        //     // Check if team was created successfully (teamResult == 0 if failed)
-        //     if (teamResult == 0)
-        //     {
-        //         throw new Exception("Failed to create team");
-        //     }
-        // }
+        // Create new team object
+        Team team = new Team
+        {
+            TeamId = teamId,
+            TaskId = taskId,
+            Role = request.Role
+        };
+        
+        // Save team to database
+        int teamResult = await _taskRepository.CreateTeam(team);
+        
+        // Check if team was created successfully (teamResult == 0 if failed)
+        if (teamResult == 0)
+        {
+            throw new Exception("Failed to create team");
+        }
+        
+        // Create new team responders
+        foreach (var responder in request.ResponderIds)
+        {
+            // Create new team responder object
+            TeamResponder teamResponder = new TeamResponder
+            {
+                TeamId = teamId,
+                ResponderId = responder
+            };
+            
+            // Save team responder to database
+            int teamResponderResult = await _taskRepository.CreateTeamResponder(teamResponder);
+            
+            // Check if team responder was created successfully (teamResponderResult == 0 if failed)
+            if (teamResponderResult == 0)
+            {
+                throw new Exception("Failed to create team responder");
+            }
+        }
+        
     }
     
     public async Task<ViewTaskDTO> GetTaskView(string taskId)

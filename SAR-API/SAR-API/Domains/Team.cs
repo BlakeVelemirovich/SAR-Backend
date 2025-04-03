@@ -10,7 +10,7 @@ public class Team
     public string TeamId { get; set; }
     
     [Column("start_datetime")]
-    public DateTime StartDateTime { get; set; }
+    public DateTime? StartDateTime { get; set; }
     
     [Column("end_datetime")]
     public DateTime? EndDateTime { get; set; }

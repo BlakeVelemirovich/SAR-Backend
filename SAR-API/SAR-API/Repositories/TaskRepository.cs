@@ -23,7 +23,7 @@ public class TaskRepository : ITaskRepository
         return result;
     }
 
-    public async Task<int> CreateTeam(TeamDTO team)
+    public async Task<int> CreateTeam(Team team)
     {
         // Save Team to DB
         await _dbContext.AddAsync(team);
@@ -58,5 +58,14 @@ public class TaskRepository : ITaskRepository
             }).FirstOrDefaultAsync();
 
         return team;
+    }
+    
+    public async Task<int> CreateTeamResponder(TeamResponder teamResponder)
+    {
+        // Save TeamResponder to DB
+        await _dbContext.AddAsync(teamResponder);
+        int result = await _dbContext.SaveChangesAsync();
+
+        return result;
     }
 }

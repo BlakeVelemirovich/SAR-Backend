@@ -7,9 +7,11 @@ public interface ITaskRepository
 {
     Task<int> CreateTask(TaskDTO task);
 
-    Task<int> CreateTeam(TeamDTO team);
+    Task<int> CreateTeam(Team team);
 
     Task<TaskIncident> GetTaskView(string taskId);
 
     Task<TeamDetailsDTO> GetTeam(string taskId);
+    
+    Task<int> CreateTeamResponder(TeamResponder teamResponder);
 }

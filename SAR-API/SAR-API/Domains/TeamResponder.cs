@@ -14,4 +14,10 @@ public class TeamResponder
     
     [Column("responder_id")]
     public string ResponderId { get; set; }
+    
+    [Column("start_datetime")]
+    public DateTime? StartDateTime { get; set; }
+    
+    [Column("end_datetime")]
+    public DateTime? EndDateTime { get; set; }
 }

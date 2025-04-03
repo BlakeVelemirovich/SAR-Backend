@@ -13,7 +13,6 @@
       <change afterPath="$PROJECT_DIR$/SAR-API/DTOs/TaskDetailsDTO.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SAR-API/DTOs/TeamDetailsDTO.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SAR-API/DTOs/ViewIncidentDetailsDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SAR-API/Domains/TeamResponder.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SAR-API/Domains/UpdateIncidentEndDateRequest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SAR-API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SAR-API/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/Controllers/IncidentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Controllers/IncidentController.cs" afterDir="false" />
@@ -27,6 +26,7 @@
       <change beforePath="$PROJECT_DIR$/SAR-API/Domains/Incident.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Domains/Incident.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/Domains/NewTaskRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Domains/NewTaskRequest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/Domains/Team.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Domains/Team.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Domains/TeamResponder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Domains/TeamResponder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/Repositories/IIncidentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Repositories/IIncidentRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/Repositories/IResponderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Repositories/IResponderRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/Repositories/ITaskRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Repositories/ITaskRepository.cs" afterDir="false" />
