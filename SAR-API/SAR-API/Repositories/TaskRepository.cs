@@ -14,7 +14,7 @@ public class TaskRepository : ITaskRepository
         _dbContext = dbContext;
     }
 
-    public async Task<int> CreateTask(TaskDTO task)
+    public async Task<int> CreateTask(TaskIncident task)
     {
         // Save Task to DB
         await _dbContext.AddAsync(task);

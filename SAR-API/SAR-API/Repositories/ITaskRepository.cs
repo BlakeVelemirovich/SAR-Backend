@@ -5,7 +5,7 @@ namespace SAR_API.Repositories;
 
 public interface ITaskRepository
 {
-    Task<int> CreateTask(TaskDTO task);
+    Task<int> CreateTask(TaskIncident task);
 
     Task<int> CreateTeam(Team team);
 

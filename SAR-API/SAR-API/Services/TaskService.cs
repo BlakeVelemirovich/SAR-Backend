@@ -19,13 +19,13 @@ public class TaskService : ITaskService
         string taskId = Guid.NewGuid().ToString();
         
         // Create new task object
-        TaskDTO task = new TaskDTO
+        TaskIncident task = new TaskIncident
         {
             TaskId = taskId,
             TaskName = request.TaskName,
-            StartDate = request.StartDate,
-            EndDate = request.EndDate,
-            OperationalPeriod = request.OpId,
+            StartDatetime = request.StartDate,
+            EndDatetime = request.EndDate,
+            OperationalPeriodId = request.OpId,
             Description = request.Description
         };
         
@@ -61,9 +61,13 @@ public class TaskService : ITaskService
         // Create new team responders
         foreach (var responder in request.ResponderIds)
         {
+            // Generate new Team Responder Id
+            string teamResponderId = Guid.NewGuid().ToString();
+            
             // Create new team responder object
             TeamResponder teamResponder = new TeamResponder
             {
+                TeamResponderId = teamResponderId,
                 TeamId = teamId,
                 ResponderId = responder
             };

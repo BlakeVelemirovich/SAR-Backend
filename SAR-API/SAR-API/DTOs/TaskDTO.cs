@@ -19,7 +19,7 @@ public class TaskDTO
     public DateTime? EndDate { get; set; }
     
     [Column("op_id")]
-    public int OperationalPeriod { get; set; }
+    public string OperationalPeriodId { get; set; }
     
     [Column("description")]
     public string Description { get; set; }

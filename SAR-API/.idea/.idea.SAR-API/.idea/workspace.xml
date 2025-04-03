@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ade5f0bb-9f00-4080-baa5-fdc7ed10af98" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/SAR-API/DTOs/TaskDetailsDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SAR-API/DTOs/TeamDetailsDTO.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SAR-API/DTOs/ViewIncidentDetailsDTO.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SAR-API/Domains/UpdateIncidentEndDateRequest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SAR-API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SAR-API/.idea/workspace.xml" afterDir="false" />
@@ -19,7 +18,9 @@
       <change beforePath="$PROJECT_DIR$/SAR-API/Controllers/TaskController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Controllers/TaskController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Controllers/UserController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/DTOs/OperationalPeriodDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/DTOs/OperationalPeriodDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/DTOs/TaskDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/DTOs/TaskDTO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/DTOs/TaskViewDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/DTOs/ViewTaskDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/DTOs/TeamDetailsDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/DTOs/TeamDetailsDTO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/DTOs/TeamMembers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/DTOs/ResponderDTO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/DTOs/TeamViewDTO.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/Database/NeonDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Database/NeonDbContext.cs" afterDir="false" />

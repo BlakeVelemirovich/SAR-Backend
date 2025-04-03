@@ -11,10 +11,10 @@ public class NewTaskRequest
     public DateTime StartDate { get; set; }
     
     [JsonProperty("endDate")]
-    public DateTime EndDate { get; set; }
+    public DateTime? EndDate { get; set; }
     
     [JsonProperty("operationalPeriodId")]
-    public int OpId { get; set; }
+    public string OpId { get; set; }
     
     [JsonProperty("description")]
     public string Description { get; set; }
