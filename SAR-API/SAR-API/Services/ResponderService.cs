@@ -75,4 +75,34 @@ public class ResponderService : IResponderService
         
         return responderId;
     }
+
+    public async Task<List<ResponderDTO>> GetAllResponders()
+    {
+        // Get responders from the database
+        var responders = await _responderRepository.GetAllResponders();
+        
+        // Check to see if any were found
+        if (responders == null)
+        {
+            throw new Exception("No responders found.");
+        }
+        
+        // Convert to DTO
+        List<ResponderDTO> responderDTOs = new List<ResponderDTO>();
+        foreach (var responder in responders)
+        {
+            ResponderDTO dto = new ResponderDTO
+            {
+                ResponderId = responder.ResponderId,
+                CheckedIn = responder.CheckedIn.ToString(),
+                ResponderName = responder.ResponderName,
+                Phone = responder.Phone
+            };
+            
+            responderDTOs.Add(dto);
+        }
+        
+        // Return the list of responders
+        return responderDTOs;
+    }
 }

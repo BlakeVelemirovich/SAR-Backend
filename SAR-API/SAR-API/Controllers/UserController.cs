@@ -90,4 +90,18 @@ public class UserController : ControllerBase
             return BadRequest("Responder not found. " + e.Message);
         }
     }
+    
+    [HttpGet("get-allResponders")]
+    public async Task<IActionResult> GetAllResponders()
+    {
+        try
+        {
+            List<ResponderDTO> responders = await _responderService.GetAllResponders();
+            return Ok(responders);
+        }
+        catch (Exception e)
+        {
+            return BadRequest("There was an error in getting all responders: " + e.Message);
+        }
+    }
 }

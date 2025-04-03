@@ -20,4 +20,8 @@ public class NeonDbContext : DbContext
     public DbSet<OperationalPeriod> operational_period { get; set; }
     
     public DbSet<TaskIncident> task { get; set; }
+    
+    public DbSet<Team> team { get; set; }
+    
+    public DbSet<TeamResponder> team_responder { get; set; }
 }

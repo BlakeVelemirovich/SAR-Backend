@@ -8,4 +8,6 @@ public interface IResponderRepository
     public Task<int> AddResponder(Responder request);
 
     Task<string> FindUserIdByEmail(string userEmail);
+
+    Task<List<Responder>> GetAllResponders();
 }

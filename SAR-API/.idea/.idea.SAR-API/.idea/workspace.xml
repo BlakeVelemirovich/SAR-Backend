@@ -11,19 +11,32 @@
   <component name="ChangeListManager">
     <list default="true" id="ade5f0bb-9f00-4080-baa5-fdc7ed10af98" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/SAR-API/DTOs/TaskDetailsDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SAR-API/DTOs/TaskViewDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SAR-API/DTOs/TeamMembers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SAR-API/DTOs/TeamViewDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SAR-API/DTOs/TeamDetailsDTO.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SAR-API/DTOs/ViewIncidentDetailsDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SAR-API/Domains/TeamResponder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SAR-API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SAR-API/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/Controllers/IncidentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Controllers/IncidentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Controllers/TaskController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Controllers/TaskController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Controllers/UserController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/DTOs/OperationalPeriodDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/DTOs/OperationalPeriodDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/DTOs/TaskViewDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/DTOs/ViewTaskDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/DTOs/TeamMembers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/DTOs/ResponderDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/DTOs/TeamViewDTO.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Database/NeonDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Database/NeonDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/Domains/Incident.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Domains/Incident.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/Domains/TaskIncident.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Domains/TaskIncident.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Domains/NewTaskRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Domains/NewTaskRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Domains/Team.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Domains/Team.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/Repositories/IIncidentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Repositories/IIncidentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SAR-API/Repositories/IncidentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Repositories/IncidentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Repositories/IResponderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Repositories/IResponderRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Repositories/ITaskRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Repositories/ITaskRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Repositories/ResponderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Repositories/ResponderRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Repositories/TaskRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Repositories/TaskRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/Services/IIncidentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Services/IIncidentService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Services/IResponderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Services/IResponderService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Services/ITaskService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Services/ITaskService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SAR-API/Services/IncidentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Services/IncidentService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Services/ResponderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Services/ResponderService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR-API/Services/TaskService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SAR-API/Services/TaskService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

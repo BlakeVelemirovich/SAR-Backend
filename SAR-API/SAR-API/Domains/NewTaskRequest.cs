@@ -13,15 +13,12 @@ public class NewTaskRequest
     [JsonProperty("endDate")]
     public DateTime EndDate { get; set; }
     
-    [JsonProperty("operationalPeriod")]
-    public int OperationalPeriod { get; set; }
+    [JsonProperty("operationalPeriodId")]
+    public int OpId { get; set; }
     
     [JsonProperty("description")]
     public string Description { get; set; }
     
     [JsonProperty("team")]
     public List<Team> Team { get; set; }
-    
-    [JsonProperty("responderId")]
-    public string ResponderId { get; set; }
 }

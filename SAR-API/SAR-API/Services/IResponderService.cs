@@ -10,4 +10,6 @@ public interface IResponderService
     public Task<string> GetUserIdByEmail(GetUserIdRequest request);
 
     Task<string> GetResponderIdByEmail(GetUserIdRequest request);
+
+    Task<List<ResponderDTO>> GetAllResponders();
 }

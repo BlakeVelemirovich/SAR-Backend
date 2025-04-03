@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using SAR_API.Domains;
+using SAR_API.DTOs;
 using SAR_API.IncidentService;
 
 namespace SAR_API.Controllers;
@@ -34,6 +35,26 @@ public class TaskController : ControllerBase
         
         // Return a success message
         return Ok("Task added successfully");
+    }
+    
+    [HttpGet("get-viewTask/{taskId}")]
+    public async Task<IActionResult> GetTaskView(string taskId)
+    {
+        // Check if the model state is valid
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+        
+        try
+        {
+            // Get the task view
+            ViewTaskDTO task = await _taskService.GetTaskView(taskId);
+            
+            // Return the task view
+            return Ok(task);
+        }
+        catch (Exception e)
+        {
+            return BadRequest("There was an error in getting the task view: " + e.Message);
+        }
     }
     
 }

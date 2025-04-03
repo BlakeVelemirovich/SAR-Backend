@@ -39,4 +39,10 @@ public class ResponderRepository : IResponderRepository
 
         return result;
     }
+    
+    public async Task<List<Responder>> GetAllResponders()
+    {
+        // Get all responders from the database
+        return await _neonDbContext.responder.ToListAsync();
+    }
 }
